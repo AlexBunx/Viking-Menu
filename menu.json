@@ -1,0 +1,1432 @@
+[
+{
+"id": "breakfast",
+"ru": "Завтраки",
+"en": "Breakfast",
+"kitchen": true,
+"note": {
+"ru": "Собери завтрак сам: выбери яйца и добавь к ним что хочется. С 10:00 до 21:00.",
+"en": "Build your own breakfast: pick your eggs and add whatever you like. 10:00–21:00."
+},
+"groups": [
+{
+"ru": "Выбери яйцо",
+"en": "Pick your eggs",
+"items": [
+{
+"ru": [
+"Трюфельный скрэмбл",
+"На фото — с сезонным драником, карамельным беконом и свежими овощами."
+],
+"en": [
+"Truffle scrambled eggs",
+"Pictured with a seasonal potato pancake, caramel bacon and fresh vegetables."
+],
+"w": "120 г",
+"p": 10,
+"img": "draniki-truffle-scramble"
+},
+{
+"ru": [
+"Глазунья из 2 яиц",
+"На фото — с ростбифом, хлебом и свежими овощами."
+],
+"en": [
+"Two fried eggs",
+"Pictured with roast beef, bread and fresh vegetables."
+],
+"w": "100 г",
+"p": 8,
+"img": "hearty-breakfast"
+},
+{
+"ru": [
+"Омлет из 2 яиц",
+""
+],
+"en": [
+"Two-egg omelette",
+""
+],
+"w": "120 г",
+"p": 8
+},
+{
+"ru": [
+"Яйца пашот",
+""
+],
+"en": [
+"Poached eggs",
+""
+],
+"w": "100 г",
+"p": 8
+}
+]
+},
+{
+"ru": "А что ещё?! Мясо и рыба",
+"en": "Meat & fish",
+"items": [
+{
+"ru": [
+"Жареные креветки",
+"На фото — с омлетом, авокадо, томатами черри и зеленью."
+],
+"en": [
+"Fried shrimp",
+"Pictured with an omelette, avocado, cherry tomatoes and greens."
+],
+"w": "80 г",
+"p": 15,
+"img": "shrimp-omelet-breakfast"
+},
+{
+"ru": [
+"Лосось гравлакс шеф-посола",
+"На фото — с омлетом и деревенским хлебом."
+],
+"en": [
+"Chef-cured salmon gravlax",
+"Pictured with an omelette and country bread."
+],
+"w": "80 г",
+"p": 18,
+"img": "salmon-gravlax-breakfast"
+},
+{
+"ru": [
+"Ростбиф из говядины с хреном",
+""
+],
+"en": [
+"Beef roast beef with horseradish",
+""
+],
+"w": "80 г + 10 г",
+"p": 15,
+"img": "roast-beef-plate"
+},
+{
+"ru": [
+"Карамельный бекон",
+"На фото — с панкейками и кленовым сиропом."
+],
+"en": [
+"Caramel bacon",
+"Pictured with pancakes and maple syrup."
+],
+"w": "80 г",
+"p": 9,
+"img": "pancakes-bacon-maple"
+},
+{
+"ru": [
+"Колбаски охотничьи",
+"На фото — с омлетом, томатами черри, рукколой и соусом от шефа."
+],
+"en": [
+"Hunter's sausages",
+"Pictured with an omelette, cherry tomatoes, rocket and chef's sauce."
+],
+"w": "130 г",
+"p": 10,
+"img": "breakfast-omelet-sausages"
+},
+{
+"ru": [
+"Паштет",
+""
+],
+"en": [
+"Pâté",
+""
+],
+"w": "100 г",
+"p": 10
+},
+{
+"ru": [
+"Тунец консервированный",
+""
+],
+"en": [
+"Canned tuna",
+""
+],
+"p": 9
+},
+{
+"ru": [
+"Сардины",
+""
+],
+"en": [
+"Sardines",
+""
+],
+"w": "100 г",
+"p": 9
+}
+]
+},
+{
+"ru": "Как в детстве, или «а хлеб?»",
+"en": "Bread, waffles & pancakes",
+"items": [
+{
+"ru": [
+"Тёплая бриошь",
+""
+],
+"en": [
+"Warm brioche",
+""
+],
+"w": "60 г",
+"p": 5
+},
+{
+"ru": [
+"Хлеб деревенский",
+""
+],
+"en": [
+"Country bread",
+""
+],
+"w": "100 г",
+"p": 3
+},
+{
+"ru": [
+"Вафля сырная",
+"На фото — со скрэмблом, авокадо, томатами и зеленью."
+],
+"en": [
+"Cheese waffle",
+"Pictured with scrambled eggs, avocado, tomatoes and greens."
+],
+"w": "100 г",
+"p": 9,
+"img": "savory-waffle"
+},
+{
+"ru": [
+"Панкейки",
+"На фото — с ягодами, кремом и мятой."
+],
+"en": [
+"Pancakes",
+"Pictured with berries, cream and mint."
+],
+"w": "160 г",
+"p": 6,
+"img": "berry-pancakes"
+},
+{
+"ru": [
+"Тонкие блинчики",
+""
+],
+"en": [
+"Thin crêpes",
+""
+],
+"w": "120 г",
+"p": 8
+},
+{
+"ru": [
+"Сезонный драник",
+""
+],
+"en": [
+"Seasonal potato pancake",
+""
+],
+"w": "120 г",
+"p": 6
+}
+]
+},
+{
+"ru": "Овощи свежие",
+"en": "Fresh vegetables",
+"items": [
+{
+"ru": [
+"Листья салата",
+""
+],
+"en": [
+"Lettuce",
+""
+],
+"w": "30 г",
+"p": 3
+},
+{
+"ru": [
+"Айсберг",
+""
+],
+"en": [
+"Iceberg",
+""
+],
+"w": "20 г",
+"p": 3
+},
+{
+"ru": [
+"Руккола",
+""
+],
+"en": [
+"Rocket",
+""
+],
+"w": "15 г",
+"p": 3
+},
+{
+"ru": [
+"Авокадо",
+""
+],
+"en": [
+"Avocado",
+""
+],
+"w": "50 г",
+"p": 5
+},
+{
+"ru": [
+"Огурец",
+""
+],
+"en": [
+"Cucumber",
+""
+],
+"w": "50 г",
+"p": 3
+},
+{
+"ru": [
+"Томаты черри",
+""
+],
+"en": [
+"Cherry tomatoes",
+""
+],
+"w": "30 г",
+"p": 3
+}
+],
+"compact": true
+}
+]
+},
+{
+"id": "main",
+"ru": "Основное",
+"en": "Mains",
+"kitchen": true,
+"note": {
+"ru": "С 10:00 до 21:00",
+"en": "10:00–21:00"
+},
+"groups": [
+{
+"ru": "Сладенькое и не сладенькое",
+"en": "Sweet & savoury",
+"items": [
+{
+"ru": [
+"Блинчики с сыром и курицей",
+"Подаются со сметаной и зеленью."
+],
+"en": [
+"Crêpes with cheese & chicken",
+"Served with sour cream and greens."
+],
+"w": "200 г + сметана",
+"p": 15,
+"img": "chicken-cheese-crepes"
+},
+{
+"ru": [
+"Сырники со сметаной и джемом",
+""
+],
+"en": [
+"Syrniki with sour cream & jam",
+""
+],
+"w": "330 г",
+"p": 22,
+"img": "syrniki"
+},
+{
+"ru": [
+"Френч-тост с кремом и джемом",
+""
+],
+"en": [
+"French toast with cream & jam",
+""
+],
+"w": "330 г",
+"p": 25,
+"img": "dessert"
+},
+{
+"ru": [
+"Блинчики с кремом и джемом",
+""
+],
+"en": [
+"Crêpes with cream & jam",
+""
+],
+"w": "200 г",
+"p": 20,
+"img": "berry-crepes"
+}
+]
+},
+{
+"ru": "Римская пицца",
+"en": "Roman pinsa",
+"items": [
+{
+"ru": [
+"Пинса с курицей и халапеньо",
+""
+],
+"en": [
+"Pinsa with chicken & jalapeño",
+""
+],
+"w": "580 г",
+"p": 30
+},
+{
+"ru": [
+"Пинса пепперони",
+""
+],
+"en": [
+"Pepperoni pinsa",
+""
+],
+"w": "500 г",
+"p": 28
+},
+{
+"ru": [
+"Пинса с беконом и грибами",
+""
+],
+"en": [
+"Pinsa with bacon & mushrooms",
+""
+],
+"w": "510 г",
+"p": 35
+},
+{
+"ru": [
+"Пинса три сыра с грушей",
+""
+],
+"en": [
+"Three-cheese pinsa with pear",
+""
+],
+"w": "550 г",
+"p": 35
+},
+{
+"ru": [
+"Пинса с креветкой и лососем",
+"Креветки, лосось, томаты черри и руккола."
+],
+"en": [
+"Pinsa with shrimp & salmon",
+"Shrimp, salmon, cherry tomatoes and rocket."
+],
+"w": "560 г",
+"p": 48,
+"img": "seafood-pizza"
+},
+{
+"ru": [
+"Пинса с ростбифом",
+""
+],
+"en": [
+"Roast beef pinsa",
+""
+],
+"w": "600 г",
+"p": 49
+}
+],
+"note": {
+"ru": "Любую пинсу можно взять с собой",
+"en": "Every pinsa is available to take away"
+}
+},
+{
+"ru": "Сезонный суп",
+"en": "Seasonal soup",
+"items": [
+{
+"ru": [
+"Томатный с сырным тостом",
+""
+],
+"en": [
+"Tomato soup with cheese toast",
+""
+],
+"w": "350 г + хлеб 120 г",
+"p": 20,
+"img": "tomato-cream-soup"
+},
+{
+"ru": [
+"Тыквенный с беконом и блю чиз",
+""
+],
+"en": [
+"Pumpkin soup with bacon & blue cheese",
+""
+],
+"w": "350 г + хлеб 60 г",
+"p": 25
+},
+{
+"ru": [
+"Тыквенный с креветками и блю чиз",
+""
+],
+"en": [
+"Pumpkin soup with shrimp & blue cheese",
+""
+],
+"w": "350 г + хлеб 60 г",
+"p": 28,
+"img": "pumpkin-soup-shrimp"
+},
+{
+"ru": [
+"Тыквенный с тостом и блю чиз",
+""
+],
+"en": [
+"Pumpkin soup with toast & blue cheese",
+""
+],
+"w": "300 г + хлеб 60 г",
+"p": 20
+}
+]
+},
+{
+"ru": "Бабулины консервации",
+"en": "Granny's pickles",
+"items": [
+{
+"ru": [
+"Оливки",
+""
+],
+"en": [
+"Olives",
+""
+],
+"w": "50 г",
+"p": 5
+},
+{
+"ru": [
+"Солёный огурец",
+""
+],
+"en": [
+"Pickled cucumber",
+""
+],
+"w": "50 г",
+"p": 3
+},
+{
+"ru": [
+"Вяленые томаты",
+""
+],
+"en": [
+"Sun-dried tomatoes",
+""
+],
+"w": "50 г",
+"p": 5
+},
+{
+"ru": [
+"Каперсы",
+""
+],
+"en": [
+"Capers",
+""
+],
+"w": "20 г",
+"p": 5
+},
+{
+"ru": [
+"Халапеньо",
+""
+],
+"en": [
+"Jalapeño",
+""
+],
+"w": "20 г",
+"p": 3
+},
+{
+"ru": [
+"Кукуруза",
+""
+],
+"en": [
+"Sweetcorn",
+""
+],
+"w": "50 г",
+"p": 3
+}
+],
+"compact": true
+}
+]
+},
+{
+"id": "snacks",
+"ru": "Закуски",
+"en": "Starters",
+"kitchen": true,
+"note": {
+"ru": "Выбери закуску под кофе или вино. С 10:00 до 21:00.",
+"en": "Pick a bite to go with coffee or wine. 10:00–21:00."
+},
+"groups": [
+{
+"ru": "",
+"en": "",
+"items": [
+{
+"ru": [
+"Паштет с карамельным луком",
+""
+],
+"en": [
+"Pâté with caramelised onion",
+""
+],
+"w": "250 г + хлеб",
+"p": 19,
+"img": "pate"
+},
+{
+"ru": [
+"Сет брускетт",
+"С лососем, ростбифом и паштетом."
+],
+"en": [
+"Bruschetta set",
+"With salmon, roast beef and pâté."
+],
+"w": "130 г",
+"p": 20,
+"img": "bruschetta"
+},
+{
+"ru": [
+"Брускетта с лососем",
+""
+],
+"en": [
+"Salmon bruschetta",
+""
+],
+"w": "40 г",
+"p": 8
+},
+{
+"ru": [
+"Брускетта с ростбифом",
+""
+],
+"en": [
+"Roast beef bruschetta",
+""
+],
+"w": "50 г",
+"p": 8
+},
+{
+"ru": [
+"Брускетта с паштетом",
+""
+],
+"en": [
+"Pâté bruschetta",
+""
+],
+"w": "40 г",
+"p": 6
+},
+{
+"ru": [
+"Оливки, орехи и сыр",
+""
+],
+"en": [
+"Olives, nuts & cheese",
+""
+],
+"w": "280 г",
+"p": 21,
+"img": "wine-snack-platter"
+},
+{
+"ru": [
+"Артишоки по-римски",
+""
+],
+"en": [
+"Roman-style artichokes",
+""
+],
+"w": "100 г",
+"p": 15
+},
+{
+"ru": [
+"Острый маринованный перец",
+""
+],
+"en": [
+"Spicy pickled peppers",
+""
+],
+"w": "30 г",
+"p": 9
+},
+{
+"ru": [
+"Запечённый камамбер с фруктами",
+""
+],
+"en": [
+"Baked camembert with fruit",
+""
+],
+"w": "380 г",
+"p": 29
+},
+{
+"ru": [
+"Колбаски Парма мини",
+""
+],
+"en": [
+"Mini Parma sausages",
+""
+],
+"w": "60 г",
+"p": 12
+}
+]
+},
+{
+"ru": "Топинги",
+"en": "Toppings",
+"items": [
+{
+"ru": [
+"Сметана",
+""
+],
+"en": [
+"Sour cream",
+""
+],
+"w": "50 г",
+"p": 3
+},
+{
+"ru": [
+"Творожный сыр",
+""
+],
+"en": [
+"Cream cheese",
+""
+],
+"w": "50 г",
+"p": 5
+},
+{
+"ru": [
+"Нутелла",
+""
+],
+"en": [
+"Nutella",
+""
+],
+"w": "50 г",
+"p": 5
+},
+{
+"ru": [
+"Взбитые сливки",
+""
+],
+"en": [
+"Whipped cream",
+""
+],
+"w": "50 г",
+"p": 3
+},
+{
+"ru": [
+"Сладкий крем",
+""
+],
+"en": [
+"Sweet cream",
+""
+],
+"w": "50 г",
+"p": 5
+},
+{
+"ru": [
+"Джем клубничный",
+""
+],
+"en": [
+"Strawberry jam",
+""
+],
+"w": "50 г",
+"p": 5
+},
+{
+"ru": [
+"Карамель",
+""
+],
+"en": [
+"Caramel",
+""
+],
+"w": "50 г",
+"p": 3
+},
+{
+"ru": [
+"Мёд",
+""
+],
+"en": [
+"Honey",
+""
+],
+"w": "50 г",
+"p": 3
+}
+],
+"compact": true
+},
+{
+"ru": "Соусы",
+"en": "Sauces",
+"items": [
+{
+"ru": [
+"Соус от шефа",
+""
+],
+"en": [
+"Chef's sauce",
+""
+],
+"w": "50 г",
+"p": 5
+},
+{
+"ru": [
+"Шрирача",
+""
+],
+"en": [
+"Sriracha",
+""
+],
+"w": "50 г",
+"p": 3
+},
+{
+"ru": [
+"Барбекю",
+""
+],
+"en": [
+"Barbecue",
+""
+],
+"w": "50 г",
+"p": 3
+},
+{
+"ru": [
+"Кетчуп",
+""
+],
+"en": [
+"Ketchup",
+""
+],
+"w": "50 г",
+"p": 3
+},
+{
+"ru": [
+"Французская горчица",
+""
+],
+"en": [
+"French mustard",
+""
+],
+"w": "30 г",
+"p": 3
+},
+{
+"ru": [
+"Хрен",
+""
+],
+"en": [
+"Horseradish",
+""
+],
+"w": "10 г",
+"p": 1
+}
+],
+"compact": true
+}
+]
+},
+{
+"id": "bakery",
+"ru": "Выпечка",
+"en": "Bakery",
+"note": {
+"ru": "Цену уточняйте у бариста",
+"en": "Ask the barista for prices"
+},
+"groups": [
+{
+"ru": "",
+"en": "",
+"items": [
+{
+"ru": [
+"Домашние пирожки",
+"С капустой, грибами и жареным луком или с мясом. Под заказ — от 6 штук."
+],
+"en": [
+"Homemade pirozhki",
+"Filled with cabbage, mushrooms and fried onion, or with meat. Pre-order from 6 pieces."
+],
+"img": "homemade-pirozhki"
+},
+{
+"ru": [
+"Домашнее печенье",
+"Два вида — хорошая пара к кофе."
+],
+"en": [
+"Homemade cookies",
+"Two kinds — a perfect match for coffee."
+],
+"img": "homemade-cookies"
+}
+]
+}
+]
+},
+{
+"id": "coffee",
+"ru": "Кофе и чай",
+"en": "Coffee & tea",
+"groups": [
+{
+"ru": "",
+"en": "",
+"items": [
+{
+"ru": [
+"Капучино",
+""
+],
+"en": [
+"Cappuccino",
+""
+],
+"v": [
+[
+"250 мл",
+8
+],
+[
+"350 мл",
+9
+]
+],
+"img": "cappuccino"
+},
+{
+"ru": [
+"Латте",
+""
+],
+"en": [
+"Latte",
+""
+],
+"v": [
+[
+"250 мл",
+8
+],
+[
+"350 мл",
+9
+]
+]
+},
+{
+"ru": [
+"Флэт уайт",
+""
+],
+"en": [
+"Flat white",
+""
+],
+"w": "250 мл",
+"p": 8
+},
+{
+"ru": [
+"Эспрессо двойной",
+""
+],
+"en": [
+"Double espresso",
+""
+],
+"w": "36 мл",
+"p": 5
+},
+{
+"ru": [
+"Американо",
+""
+],
+"en": [
+"Americano",
+""
+],
+"w": "150 мл",
+"p": 6
+},
+{
+"ru": [
+"Айс-латте",
+""
+],
+"en": [
+"Iced latte",
+""
+],
+"w": "350 мл",
+"p": 8.5,
+"img": "iced-latte"
+},
+{
+"ru": [
+"Фильтр-кофе",
+"Зерно от обжарщика KOJO."
+],
+"en": [
+"Filter coffee",
+"Beans from KOJO roasters."
+],
+"w": "250 мл",
+"p": 11,
+"img": "beans"
+},
+{
+"ru": [
+"Эспрессо-тоник",
+""
+],
+"en": [
+"Espresso tonic",
+""
+],
+"w": "350 мл",
+"p": 9.5
+},
+{
+"ru": [
+"Кофе-бамбл",
+""
+],
+"en": [
+"Bumble coffee",
+""
+],
+"w": "350 мл",
+"p": 10
+},
+{
+"ru": [
+"Какао",
+""
+],
+"en": [
+"Cocoa",
+""
+],
+"v": [
+[
+"250 мл",
+8
+],
+[
+"350 мл",
+9
+]
+]
+},
+{
+"ru": [
+"Чай в ассортименте",
+""
+],
+"en": [
+"Tea selection",
+""
+],
+"w": "600 мл",
+"p": 10
+},
+{
+"ru": [
+"Чай авторский",
+""
+],
+"en": [
+"Signature tea",
+""
+],
+"w": "600 мл",
+"p": 15,
+"img": "tatar-herbal-tea"
+},
+{
+"ru": [
+"Сироп",
+""
+],
+"en": [
+"Syrup",
+""
+],
+"w": "20 мл",
+"p": 1
+}
+]
+}
+]
+},
+{
+"id": "bar",
+"ru": "Бар",
+"en": "Bar",
+"groups": [
+{
+"ru": "Крепкое",
+"en": "Spirits",
+"items": [
+{
+"ru": [
+"Виски Johnnie Walker Black Label",
+""
+],
+"en": [
+"Whisky Johnnie Walker Black Label",
+""
+],
+"w": "50 мл",
+"p": 16
+},
+{
+"ru": [
+"Ром Bacardi Carta Blanca",
+""
+],
+"en": [
+"Rum Bacardi Carta Blanca",
+""
+],
+"w": "50 мл",
+"p": 16
+},
+{
+"ru": [
+"Джин Bombay Sapphire",
+""
+],
+"en": [
+"Gin Bombay Sapphire",
+""
+],
+"w": "50 мл",
+"p": 16
+},
+{
+"ru": [
+"Текила Jose Cuervo Especial Reposado",
+""
+],
+"en": [
+"Tequila Jose Cuervo Especial Reposado",
+""
+],
+"w": "50 мл",
+"p": 16
+},
+{
+"ru": [
+"Водка Finlandia",
+""
+],
+"en": [
+"Vodka Finlandia",
+""
+],
+"w": "50 мл",
+"p": 10
+},
+{
+"ru": [
+"Ликёр Merrys Irish Cream",
+""
+],
+"en": [
+"Liqueur Merrys Irish Cream",
+""
+],
+"w": "50 мл",
+"p": 10
+}
+],
+"compact": true
+},
+{
+"ru": "Тихие вина",
+"en": "Still wines",
+"items": [
+{
+"ru": [
+"Luccarelli Negroamaro",
+"Красное полусухое. Идеально к мясной пицце, колбаскам и сырной нарезке."
+],
+"en": [
+"Luccarelli Negroamaro",
+"Red, off-dry. Perfect with meat pinsa, sausages and cheese."
+],
+"w": "100 мл",
+"p": 17
+},
+{
+"ru": [
+"Luccarelli Rosato",
+"Розовое. Универсальное вино под пиццу с морепродуктами и сыр."
+],
+"en": [
+"Luccarelli Rosato",
+"Rosé. An easy match for seafood pinsa and cheese."
+],
+"w": "100 мл",
+"p": 17
+},
+{
+"ru": [
+"Cono Sur Bicicleta Sauvignon Blanc",
+"Белое. Прекрасный аперитив перед едой."
+],
+"en": [
+"Cono Sur Bicicleta Sauvignon Blanc",
+"White. A lovely aperitif before your meal."
+],
+"w": "100 мл",
+"p": 17
+},
+{
+"ru": [
+"Bolla Bardolino",
+"Красное сухое. Хорошо дополнит мясные закуски и нарезки."
+],
+"en": [
+"Bolla Bardolino",
+"Red, dry. Goes well with meat starters and cold cuts."
+],
+"w": "100 мл",
+"p": 17
+},
+{
+"ru": [
+"Grüner Veltliner",
+"Белое. Идеальный спутник еды."
+],
+"en": [
+"Grüner Veltliner",
+"White. An ideal companion for food."
+],
+"w": "100 мл",
+"p": 17
+},
+{
+"ru": [
+"Gewürztraminer",
+"Белое полусладкое. Пара для закусочной тарелки с артишоками и куриного паштета."
+],
+"en": [
+"Gewürztraminer",
+"White, semi-sweet. Pairs with the artichoke platter and chicken pâté."
+],
+"w": "100 мл",
+"p": 17
+}
+]
+},
+{
+"ru": "Игристые вина",
+"en": "Sparkling wines",
+"items": [
+{
+"ru": [
+"Bellisco Brut Cava",
+""
+],
+"en": [
+"Bellisco Brut Cava",
+""
+],
+"w": "бокал 150 мл",
+"p": 20
+},
+{
+"ru": [
+"Bellisco Brut Rosado Cava",
+""
+],
+"en": [
+"Bellisco Brut Rosado Cava",
+""
+],
+"w": "бокал 150 мл",
+"p": 20
+},
+{
+"ru": [
+"Castelli Goldenheart Brut",
+""
+],
+"en": [
+"Castelli Goldenheart Brut",
+""
+],
+"w": "бокал 150 мл",
+"p": 20
+}
+],
+"compact": true
+},
+{
+"ru": "Безалкогольное",
+"en": "Soft drinks",
+"items": [
+{
+"ru": [
+"Сок Rich",
+""
+],
+"en": [
+"Rich juice",
+""
+],
+"w": "200 мл",
+"p": 4
+},
+{
+"ru": [
+"Тоник Schweppes Indian Tonic",
+""
+],
+"en": [
+"Schweppes Indian Tonic",
+""
+],
+"w": "200 мл",
+"p": 4
+},
+{
+"ru": [
+"Cola / Fanta / Sprite",
+""
+],
+"en": [
+"Cola / Fanta / Sprite",
+""
+],
+"w": "330 мл",
+"p": 4
+}
+],
+"compact": true
+}
+]
+}
+]
