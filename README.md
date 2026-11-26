@@ -2,7 +2,7 @@
 
 Электронное QR-меню для кафе VIKING (Минск, ул. Карла Маркса, 21).
 
-Демо: https://alexbunx.github.io/viking-menu/
+Демо: https://alexbunx.github.io/Viking-Menu/
 
 ## Что умеет
 
