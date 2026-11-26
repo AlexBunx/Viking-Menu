@@ -91,7 +91,10 @@ section h2{font-size:30px;margin-bottom:4px}
 .vr{display:flex;align-items:center;gap:14px}
 .sp{display:flex;align-items:center;gap:14px}
 .vars div{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:8px}
-.vars .price{font-size:24px}
+.nutri{font-size:13px;line-height:1.5}.nutri b{color:var(--ink);font-weight:500;font-size:15px}
+.vars{white-space:normal}.vars div>span:first-child{flex:1}.vr{flex:none}
+.vars small{display:block;color:var(--mute);font-size:12px;margin-top:2px}
+.vars .price{font-size:20px}
 .empty{text-align:center;color:var(--mute);padding:40px 0;display:none}
 
 .sheet{position:fixed;inset:0;z-index:20;display:none}
@@ -184,6 +187,7 @@ body.hascart{padding-bottom:84px}
     <div class="body">
       <h3 id="s-title"></h3>
       <p id="s-desc"></p>
+      <p class="nutri" id="s-n"></p>
       <div class="meta"><span class="w" id="s-w" style="flex:1"></span><span class="sp" id="s-p"></span></div>
       <p class="hint" id="s-hint"></p>
     </div>
@@ -194,9 +198,9 @@ body.hascart{padding-bottom:84px}
 {
 const UI={
  ru:{tag:"Кафе · бар · кофе",hours:"Пн–Вс 10:00–23:00",kitchen:"Кухня до 21:00",kitchenOff:"Кухня закрыта до 10:00",q:"Найти блюдо или напиток",empty:"Ничего не нашлось",addrH:"Адрес",addr:"Минск, ул. Карла Маркса, 21",hoursH:"Часы работы",hoursF:"Каждый день 10:00–23:00<br>Кухня до 21:00",bookH:"Бронь столика",book:"Напишите нам в директ Instagram",demo:"Демо-версия. Цены в белорусских рублях. Актуальные цены и наличие уточняйте у персонала.",hint:"Нажмите «+», чтобы добавить в заказ, а затем покажите заказ официанту.",hintOff:"Кухня уже закрыта — это блюдо можно заказать завтра с 10:00.",cur:"BYN",ask:"цена у бариста",load:"Не удалось загрузить меню. Обновите страницу.",
-  my:"Мой заказ",pos:n=>n+" "+(n%10==1&&n%100!=11?"позиция":n%10>=2&&n%10<=4&&(n%100<10||n%100>=20)?"позиции":"позиций"),show:"Покажите этот экран официанту",total:"Итого",extra:"+ позиции с ценой у бариста",clear:"Очистить заказ",sure:"Точно очистить?",emptyCart:"Заказ пуст. Нажмите «+» у блюда или напитка.",add:"Добавить",less:"Убрать",back:"К меню",closedNote:"Кухня закрыта — блюда кухни можно будет заказать с 10:00."},
+  my:"Мой заказ",pos:n=>n+" "+(n%10==1&&n%100!=11?"позиция":n%10>=2&&n%10<=4&&(n%100<10||n%100>=20)?"позиции":"позиций"),show:"Покажите этот экран официанту",total:"Итого",extra:"+ позиции с ценой у бариста",clear:"Очистить заказ",sure:"Точно очистить?",emptyCart:"Заказ пуст. Нажмите «+» у блюда или напитка.",add:"Добавить",less:"Убрать",back:"К меню",closedNote:"Кухня закрыта — блюда кухни можно будет заказать с 10:00.",approx:"КБЖУ на порцию — примерный расчёт, не лабораторные данные.",approxShort:"примерно"},
  en:{tag:"Cafe · bar · coffee",hours:"Daily 10:00–23:00",kitchen:"Kitchen until 21:00",kitchenOff:"Kitchen closed until 10:00",q:"Search dishes and drinks",empty:"Nothing found",addrH:"Address",addr:"21 Karla Marksa St, Minsk",hoursH:"Opening hours",hoursF:"Every day 10:00–23:00<br>Kitchen until 21:00",bookH:"Book a table",book:"Send us a DM on Instagram",demo:"Demo version. Prices in Belarusian roubles. Please check current prices and availability with our staff.",hint:"Tap “+” to add it to your order, then show the order to your waiter.",hintOff:"The kitchen is closed — this dish is available tomorrow from 10:00.",cur:"BYN",ask:"ask the barista",load:"Couldn't load the menu. Please refresh the page.",
-  my:"My order",pos:n=>n+(n==1?" item":" items"),show:"Show this screen to your waiter",total:"Total",extra:"+ items priced by the barista",clear:"Clear order",sure:"Clear for sure?",emptyCart:"Your order is empty. Tap “+” next to a dish or drink.",add:"Add",less:"Remove",back:"Back to menu",closedNote:"The kitchen is closed — kitchen dishes can be ordered from 10:00."}
+  my:"My order",pos:n=>n+(n==1?" item":" items"),show:"Show this screen to your waiter",total:"Total",extra:"+ items priced by the barista",clear:"Clear order",sure:"Clear for sure?",emptyCart:"Your order is empty. Tap “+” next to a dish or drink.",add:"Add",less:"Remove",back:"Back to menu",closedNote:"The kitchen is closed — kitchen dishes can be ordered from 10:00.",approx:"Calories and macros per serving are approximate estimates, not lab data.",approxShort:"approximate"}
 };
 let CATS=[],INDEX={},cart={},sheetKey=null;
 let lang="ru";try{lang=localStorage.getItem("vk-lang")||"ru"}catch(e){}
@@ -211,6 +215,11 @@ const qty=k=>cart[k]||0;
 function priceOf(it){const t=UI[lang];
  if(it.v)return it.v.map(x=>num(x[1])).join(" / ")+" "+t.cur;
  return it.p==null?t.ask:num(it.p)+" "+t.cur}
+const fmtN=x=>String(x).replace(".",lang==="ru"?",":".");
+const kc=n=>n?"≈"+n[0]+" "+(lang==="ru"?"ккал":"kcal"):"";
+const kbju=n=>n?kc(n)+" · "+(lang==="ru"?`Б ${fmtN(n[1])} · Ж ${fmtN(n[2])} · У ${fmtN(n[3])}`:`P ${fmtN(n[1])} · F ${fmtN(n[2])} · C ${fmtN(n[3])}`):"";
+function kcalOf(it){if(it.vn)return"≈"+it.vn[0][0]+"–"+it.vn[it.vn.length-1][0]+" "+(lang==="ru"?"ккал":"kcal");return kc(it.n)}
+const wk=it=>[weightOf(it),kcalOf(it)].filter(Boolean).join(" · ");
 function weightOf(it){return it.v?unit(it.v.map(x=>x[0].replace(/ мл/,"")).join(" / ")+" мл"):unit(it.w)}
 function kitchenOpen(){const h=+new Intl.DateTimeFormat("en-GB",{hour:"numeric",hourCycle:"h23",timeZone:"Europe/Minsk"}).format(new Date());return h>=10&&h<21}
 function matches(it,q){return !q||(it.ru.join(" ")+" "+it.en.join(" ")).toLowerCase().includes(q)}
@@ -222,7 +231,7 @@ function itemQty(c,it){return it.v?it.v.reduce((s,_,vi)=>s+qty(keyOf(c,it,vi)),0
 function save(){try{localStorage.setItem("vk-cart",JSON.stringify(cart))}catch(e){}}
 function change(k,d){const e=INDEX[k];if(!e)return;if(d>0&&e.c.kitchen&&!kitchenOpen())return;
  cart[k]=Math.max(0,qty(k)+d);if(!cart[k])delete cart[k];save();render();if(sheetKey)fillSheet();if($("order").classList.contains("open"))renderOrder()}
-function totals(){let n=0,sum=0,unk=false;for(const k in cart){const e=INDEX[k];if(!e)continue;n+=cart[k];const p=e.vi!=null?e.it.v[e.vi][1]:e.it.p;if(p==null)unk=true;else sum+=p*cart[k]}return{n,sum:Math.round(sum*100)/100,unk}}
+function totals(){let n=0,sum=0,unk=false,kcal=0;for(const k in cart){const e=INDEX[k];if(!e)continue;n+=cart[k];const nn=e.vi!=null?(e.it.vn&&e.it.vn[e.vi]):e.it.n;if(nn)kcal+=nn[0]*cart[k];const p=e.vi!=null?e.it.v[e.vi][1]:e.it.p;if(p==null)unk=true;else sum+=p*cart[k]}return{n,sum:Math.round(sum*100)/100,unk,kcal}}
 function render(){
  const t=UI[lang],q=$("q").value.trim().toLowerCase(),open=kitchenOpen();
  document.documentElement.lang=lang;
@@ -236,10 +245,10 @@ function render(){
    const items=g.items.map((it,ii)=>({it,ii})).filter(({it})=>matches(it,q));
    if(!items.length)return"";shown+=items.length;
    const head=(g[lang]?`<h3 class="grp">${esc(g[lang])}</h3>`:"")+(g.note?`<p class="gnote">${esc(g.note[lang])}</p>`:"");
-   if(g.compact)return head+`<div class="rows${off?" off":""}">${items.map(({it})=>{const k=keyOf(c,it);return`<div class="row${qty(k)?" sel":""}"><span class="n">${esc(it[lang][0])}<span class="w"> · ${weightOf(it)}</span></span><span class="price">${priceOf(it)}</span>${stepper(k,off)}</div>`}).join("")}</div>`;
+   if(g.compact)return head+`<div class="rows${off?" off":""}">${items.map(({it})=>{const k=keyOf(c,it);return`<div class="row${qty(k)?" sel":""}"><span class="n">${esc(it[lang][0])}<span class="w"> · ${wk(it)}</span></span><span class="price">${priceOf(it)}</span>${stepper(k,off)}</div>`}).join("")}</div>`;
    return head+`<div class="list">${items.map(({it,ii})=>{const [n,d]=it[lang],k=keyOf(c,it),iq=itemQty(c,it);
     const st=off?"":it.v?`<span class="step${iq?" on":""}"><button class="pl" data-open="${ci}/${gi}/${ii}" aria-label="${t.add}">${iq?iq+" ›":"+"}</button></span>`:stepper(k,false);
-    return`<div class="item${off?" off":""}${iq?" sel":""}"><button class="open" data-open="${ci}/${gi}/${ii}">${it.img?`<span class="ph"><img src="${img(it.img)}" alt="" loading="lazy"></span>`:""}<span class="info"><h3>${esc(n)}</h3>${d?`<p>${esc(d)}</p>`:""}<span class="meta"><span class="w">${weightOf(it)}</span><span class="price">${priceOf(it)}</span></span></span></button>${st}</div>`}).join("")}</div>`}).join("");
+    return`<div class="item${off?" off":""}${iq?" sel":""}"><button class="open" data-open="${ci}/${gi}/${ii}">${it.img?`<span class="ph"><img src="${img(it.img)}" alt="" loading="lazy"></span>`:""}<span class="info"><h3>${esc(n)}</h3>${d?`<p>${esc(d)}</p>`:""}<span class="meta"><span class="w">${wk(it)}</span><span class="price">${priceOf(it)}</span></span></span></button>${st}</div>`}).join("")}</div>`}).join("");
   if(!groups)return"";
   return`<section id="${c.id}"><h2>${esc(c[lang])}</h2><p class="note">${c.note?esc(c.note[lang]):""}</p>${groups}</section>`}).join("");
  $("empty").style.display=shown||!CATS.length?"none":"block";
@@ -252,7 +261,8 @@ function render(){
 function fillSheet(){const t=UI[lang],c=sheetKey.c,it=sheetKey.it,off=c.kitchen&&!kitchenOpen();
  $("s-img").innerHTML=it.img?`<img src="${img(it.img)}" alt="">`:"";$("s-img").style.display=it.img?"":"none";
  $("s-title").textContent=it[lang][0];$("s-desc").textContent=it[lang][1];
- if(it.v){$("s-w").innerHTML=`<div class="vars">${it.v.map((x,vi)=>`<div><span>${unit(x[0])}</span><span class="vr"><span class="price">${num(x[1])} ${t.cur}</span>${stepper(keyOf(c,it,vi),off,true)}</span></div>`).join("")}</div>`;$("s-p").innerHTML=""}
+ $("s-n").innerHTML=it.n?`<b>${kbju(it.n)}</b><br>${t.approx}`:it.vn?t.approx:"";$("s-n").style.display=it.n||it.vn?"":"none";
+ if(it.v){$("s-w").innerHTML=`<div class="vars">${it.v.map((x,vi)=>`<div><span>${unit(x[0])}${it.vn?`<small>${kbju(it.vn[vi])}</small>`:""}</span><span class="vr"><span class="price">${num(x[1])} ${t.cur}</span>${stepper(keyOf(c,it,vi),off,true)}</span></div>`).join("")}</div>`;$("s-p").innerHTML=""}
  else{$("s-w").textContent=unit(it.w);$("s-p").innerHTML=`<span class="price">${priceOf(it)}</span>${stepper(keyOf(c,it),off,true)}`}
  $("s-hint").textContent=off?t.hintOff:t.hint}
 function openSheet(path){const [ci,gi,ii]=path.split("/").map(Number),c=CATS[ci];sheetKey={c,it:c.groups[gi].items[ii]};fillSheet();
@@ -263,7 +273,7 @@ function renderOrder(){const t=UI[lang],tt=totals();$("o-title").textContent=t.m
  $("o-list").innerHTML=(closed?`<p class="owarn">${t.closedNote}</p>`:"")+CATS.map(c=>{const ks=Object.keys(cart).filter(k=>INDEX[k]&&INDEX[k].c===c);if(!ks.length)return"";
   return`<h3 class="grp">${esc(c[lang])}</h3><div class="rows">${ks.map(k=>{const e=INDEX[k],p=e.vi!=null?e.it.v[e.vi][1]:e.it.p,n=cart[k];
    return`<div class="row ord"><span class="n"><b class="x">${n}×</b> ${esc(e.it[lang][0])}${e.vi!=null?`<span class="w"> · ${unit(e.it.v[e.vi][0])}</span>`:""}</span><span class="price">${p==null?"—":num(Math.round(p*n*100)/100)}</span>${stepper(k,false)}</div>`}).join("")}</div>`}).join("");
- $("o-foot").innerHTML=`<div class="otot"><span>${t.total}</span><span class="price">${num(tt.sum)} ${t.cur}</span></div>${tt.unk?`<p class="gnote">${t.extra}</p>`:""}<button class="clr" id="o-clear">${t.clear}</button>`}
+ $("o-foot").innerHTML=`<div class="otot"><span>${t.total}</span><span class="price">${num(tt.sum)} ${t.cur}</span></div>${tt.kcal?`<p class="gnote">≈ ${tt.kcal.toLocaleString(lang==="ru"?"ru-RU":"en-GB")} ${lang==="ru"?"ккал":"kcal"} · ${t.approxShort}</p>`:""}${tt.unk?`<p class="gnote">${t.extra}</p>`:""}<button class="clr" id="o-clear">${t.clear}</button>`}
 function setLang(l){lang=l;try{localStorage.setItem("vk-lang",l)}catch(e){}render();if(sheetKey)fillSheet();if($("order").classList.contains("open"))renderOrder()}
 $("l-ru").onclick=()=>setLang("ru");$("l-en").onclick=()=>setLang("en");
 $("q").oninput=()=>{$("qx").style.display=$("q").value?"block":"none";render()};
